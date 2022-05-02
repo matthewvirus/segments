@@ -25,7 +25,7 @@ class Segment {
     }
 
     Point intersection(Segment another) {
-        if (x1/another.x1 == y1/another.y1 || x1/another.x1 == y2/another.y2) {
+        if (x1/another.x1 == y1/another.y1 || x1/another.x1 == y2/another.y2 || (x1 == another.x1 && y2 == another.y2 && y1 > another.y1 && x2 > another.x2)) {
             return null;
         }
         else {
